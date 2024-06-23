@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -45,7 +46,10 @@ public class Player : MonoBehaviour
         Debug.Log(collider.gameObject.tag);
         if (collider.gameObject.tag == "Obstacle")
         {
+
             Debug.Log("ぶつかった");
+            SceneManager.LoadScene("GameOverScene");
+
         }
     }
 }

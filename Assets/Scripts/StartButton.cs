@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/*
+ButtonUIではなく，画像クリックで動かすための処理．
+現在（モック作成中）は使っていない．
+*/
+
 public class StartButton : MonoBehaviour
 {
     BaseButton button;
@@ -7,15 +12,16 @@ public class StartButton : MonoBehaviour
     void Start()
     {
         button = GetComponent<BaseButton>();
-        Debug.Log(button);  
+        Debug.Log(button);
     }
 
     // Update is called once per frame
     void Update()
     {
-            button.onClickCallback = ()=> {  
-                Debug.Log("タップした時の処理");  
-            }; 
+        button.onClickCallback = () =>
+        {
+            Debug.Log("タップした時の処理");
+        };
     }
 
 
